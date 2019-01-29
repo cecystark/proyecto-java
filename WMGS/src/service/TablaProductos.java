@@ -2,7 +2,7 @@ package service;
 
 import model.Inventario;
 import model.Producto;
-import view.InventarioRespuestaFrame;
+import view.frames.InventarioRespuestaFrame;
 
 import javax.swing.table.DefaultTableModel;
 import java.util.List;

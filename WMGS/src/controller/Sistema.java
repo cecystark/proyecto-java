@@ -1,6 +1,5 @@
 package controller;
 
-import model.Inventario;
 import model.Producto;
 
 import javax.swing.*;
@@ -16,7 +15,6 @@ public class Sistema {
 	private String usuario;
 	private String contrasenia;
 		
-	private Inventario inventario;
 	public List<Producto> listaDeProductos;
 	
 	public Sistema() {
@@ -35,13 +33,12 @@ public class Sistema {
 		return instancia;
 	}
 	
-	@SuppressWarnings("unchecked")
 	public boolean cargarArchivo() {
 		boolean result = true;
 		
 		File archivo = new File(this.nombreArchivo);
-		FileInputStream entrada = null;
-		ObjectInputStream reader = null;
+		FileInputStream entrada;
+		ObjectInputStream reader;
 		
 		try {
 			archivo.createNewFile();
@@ -56,8 +53,8 @@ public class Sistema {
 			this.listaDeProductos = (ArrayList<Producto>) reader.readObject();
 		}
 		catch (IOException | ClassNotFoundException e ) {
-		//	JOptionPane.showMessageDialog(null, "ERROR en la lectura del fichero");
-			//System.out.println(e.toString());
+			JOptionPane.showMessageDialog(null, "ERROR en la lectura del fichero");
+			System.out.println(e.toString());
 			result = false;
 		}
 		return result;
@@ -66,8 +63,8 @@ public class Sistema {
 	public boolean guardarArchivo() {
 		boolean result = true;
 		
-		FileOutputStream salida = null;
-		ObjectOutputStream writer = null;
+		FileOutputStream salida;
+		ObjectOutputStream writer;
 		
 		try {
 			salida = new FileOutputStream(this.nombreArchivo);

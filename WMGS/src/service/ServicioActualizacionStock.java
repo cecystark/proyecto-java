@@ -8,7 +8,6 @@ public class ServicioActualizacionStock {
 	
 	Inventario inventarioPointer;
 	
-		
 	public void cargarMercaderia(String codigo, Object cantidad) {
 		
 		int cantidadInt = (int) cantidad;
@@ -27,9 +26,9 @@ public class ServicioActualizacionStock {
 		int codigoInt = Integer.parseUnsignedInt(codigo);
 		int cantidadInt = (int) cantidad;
 		
-		boolean sePudo = inventarioPointer.retirarMercaderia(codigoInt, cantidadInt);
+		boolean operacionExitosa = inventarioPointer.retirarMercaderia(codigoInt, cantidadInt);
 		
-		if (sePudo)
+		if (operacionExitosa)
 			JOptionPane.showMessageDialog(null,"La mercaderia ha sido retirada correctamente del sistema.");
 		else 
 			JOptionPane.showMessageDialog(null,"El stock es insuficiente, ingrese otra cantidad");

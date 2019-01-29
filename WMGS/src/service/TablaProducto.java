@@ -1,7 +1,7 @@
 package service;
 
 import model.Producto;
-import view.ProductoRespuestaFrame;
+import view.frames.ProductoRespuestaFrame;
 
 import javax.swing.table.DefaultTableModel;
 
