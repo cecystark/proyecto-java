@@ -7,10 +7,10 @@ public class Main {
 	public static void main(String[] args) {
 		Sistema.getInstancia().cargarArchivo();
 		
-		Home frameHome = new Home();
+		HomeFrame frameHome = new HomeFrame();
 		frameHome.setVisible(true);
 		
-		Menu frameMenu = new Menu();
+		MenuFrame frameMenu = new MenuFrame();
 		frameMenu.setVisible(false);
 	}
 	

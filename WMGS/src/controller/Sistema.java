@@ -1,20 +1,12 @@
 package controller;
 
-import java.io.EOFException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.swing.JOptionPane;
-
 import model.Inventario;
 import model.Producto;
-import view.Home;
+
+import javax.swing.*;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Sistema {
 
@@ -95,5 +87,5 @@ public class Sistema {
 	public boolean validarUsuario(String user, String pass) {
 		return usuario.equals(user) && contrasenia.equals(pass);
 	}
-	
+
 }
